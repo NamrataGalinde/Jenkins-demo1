@@ -5,7 +5,11 @@ agent any
     {
         stage ('Git checkout')
         {
+            steps
+            {
+            echo "getting source code from github"
            git branch: 'dev', url: 'https://github.com/NamrataGalinde/Jenkins-demo1.git'
+             }
         }
         stage ('Build')
         { 
