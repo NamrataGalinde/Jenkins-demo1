@@ -17,7 +17,7 @@ agent any
         steps {
            echo "building"
            //bat 'mvn --version'
-           bat 'java -version'
+           sh 'java -version'
            }
            
         }
