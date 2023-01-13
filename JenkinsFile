@@ -11,6 +11,14 @@ agent any
            git branch: 'dev', url: 'https://github.com/NamrataGalinde/Jenkins-demo1.git'
              }
         }
+        stage ('User decision')
+        {
+            steps
+            {
+            input 'please approve to proceed'
+          
+             }
+        }
         stage ('Build')
         { 
         
