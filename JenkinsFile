@@ -3,17 +3,19 @@ pipeline
 agent any 
     stages 
     {
-        //stage ('Git checkout')
-        //{
-          //  git branch: 'dev', url: 'https://github.com/Avinash-astro/demo.git'
-        //}
+        stage ('Git checkout')
+        {
+           git branch: 'dev', url: 'https://github.com/NamrataGalinde/Jenkins-demo1.git'
+        }
         stage ('Build')
         { 
         
         steps {
            echo "building"
+           bat 'mvn --version'
+           bat 'java -version'
            }
-         // sh 'mvn --version' 
+           
         }
        /* stage ('Test') { 
         
